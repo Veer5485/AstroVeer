@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kundli Milan Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Kundli Milan Calculator</h1>
+      <p>Check your Ashtakoota compatibility</p>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <form id="milan-form">
+          <div class="profiles-wrapper">
+            <!-- Boy's Details -->
+            <div class="profile-card">
+              <h2>Boy's Details</h2>
+              <div class="form-group">
+                <label for="boyName">Name</label>
+                <input type="text" id="boyName" required placeholder="Enter Name">
+              </div>
+              <div class="form-group">
+                <label for="boyDob">Date of Birth</label>
+                <input type="date" id="boyDob" required>
+              </div>
+              <div class="form-group">
+                <label for="boyTob">Time of Birth</label>
+                <input type="time" id="boyTob" required>
+              </div>
+              <div class="form-group">
+                <label for="boyPlace">Birth Place</label>
+                <input type="text" id="boyPlace" required placeholder="Enter City">
+              </div>
+            </div>
+
+            <!-- Girl's Details -->
+            <div class="profile-card">
+              <h2>Girl's Details</h2>
+              <div class="form-group">
+                <label for="girlName">Name</label>
+                <input type="text" id="girlName" required placeholder="Enter Name">
+              </div>
+              <div class="form-group">
+                <label for="girlDob">Date of Birth</label>
+                <input type="date" id="girlDob" required>
+              </div>
+              <div class="form-group">
+                <label for="girlTob">Time of Birth</label>
+                <input type="time" id="girlTob" required>
+              </div>
+              <div class="form-group">
+                <label for="girlPlace">Birth Place</label>
+                <input type="text" id="girlPlace" required placeholder="Enter City">
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="calculate-btn">Calculate Match</button>
+        </form>
+      </div>
+
+      <!-- Results Section (Hidden by default) -->
+      <div id="results" class="results-container hidden">
+        <h2>Match Results</h2>
+        <div class="score-circle">
+          <span id="total-score">0</span> / 36
+        </div>
+
+        <div class="koota-breakdown">
+          <h3>Ashtakoota Breakdown</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Koota</th>
+                <th>Obtained</th>
+                <th>Max</th>
+              </tr>
+            </thead>
+            <tbody id="koota-table-body">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="verdict-box" id="verdict-box">
+          <p id="verdict-en" class="verdict-en"></p>
+          <p id="verdict-hi" class="verdict-hi"></p>
+        </div>
+
+        <button id="reset-btn" class="secondary-btn">Check Another</button>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
